@@ -149,12 +149,7 @@
                         </div>
                     </a>
                 </div>
-            </li>
-            <li>
-                <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">
-                    <i class="anticon anticon-appstore"></i>
-                </a>
-            </li>
+
         </ul>
     </div>
 </div>  
