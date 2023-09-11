@@ -3,8 +3,7 @@
         <ul class="side-nav-menu scrollable ps-container ps-theme-default ps-active-y" data-ps-id="5212086f-5bf5-1150-2f1c-a9de03bb9281">
             <li class="nav-item dropdown">
                 <a class="dropdown-toggle" href="javascript:void(0);">
-                    <span class="icon-holder">
-                        <i class="anticon anticon-dashboard"></i>
+                    <span class="icon-holder">                   
                     </span>
                     <span class="title">Dashboard</span>
                 </a>
