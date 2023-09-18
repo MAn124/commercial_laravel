@@ -4,18 +4,18 @@
     <title>Enlink - Admin Dashboard Template</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/logo/favicon.png">
+    <link rel="shortcut icon" href="{{asset('/images/logo/favicon.png')}}">
 
     <!-- page css -->
 
     <!-- Core css -->
-    <link href="assets/css/app.min.css" rel="stylesheet">
+    <link href="{{asset('/css/app.min.css')}}" rel="stylesheet">
 
 </head>
 
 <body>
     <div class="app">
-        <div class="container-fluid p-h-0 p-v-20 bg full-height d-flex" style="background-image: url('assets/images/others/login-3.png')">
+        <div class="container-fluid p-h-0 p-v-20 bg full-height d-flex" style="background-image: url('{{asset('/images/others/login-3.png')}}')">
             <div class="d-flex flex-column justify-content-between w-100">
                 <div class="container d-flex h-100">
                     <div class="row align-items-center w-100">
