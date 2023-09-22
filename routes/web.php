@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\admin\AuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('layout.master');
 });
-Route::get('/login',[UserController::class, login]);
 Route::get('/register', function() {
     return view('admin.auth.register');
 });
+Route::get('/login', [AuthController::class, 'getLogin'])->name('getLogin');
+Route::post('/login', [AuthController::class, 'login'])->name('postLogin');
