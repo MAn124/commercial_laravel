@@ -24,7 +24,15 @@ class AuthRequest extends FormRequest
     public function rules()
     {
         return [
-            
+            'name' => 'required | max:50 | min:8',
+            'email' => 'required | email',
+        ];
+    }
+    public function messages()
+    {
+        return [
+            'name.required' => 'Please enter username',
+            'name.min' => 'Input minimum 8 characters',
         ];
     }
 }

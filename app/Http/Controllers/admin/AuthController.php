@@ -21,6 +21,8 @@ class AuthController extends Controller
     public function postRegister(AuthRequest $request) {
         User::create([
             'name' => $request->userName,
+            'email' => $request->email,
+            'pasword' => $request->password,
         ]);
     }
 }
