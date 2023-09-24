@@ -13,7 +13,7 @@ class AuthRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -26,6 +26,7 @@ class AuthRequest extends FormRequest
         return [
             'name' => 'required | max:50 | min:8',
             'email' => 'required | email',
+            'password' => 'required | min:6 | confirmed',
         ];
     }
     public function messages()
@@ -33,6 +34,12 @@ class AuthRequest extends FormRequest
         return [
             'name.required' => 'Please enter username',
             'name.min' => 'Input minimum 8 characters',
+            'name.max' => 'Input maximun 50 characters',
+            'email.required' => 'Please enter email address',
+            'email.email' => 'Invalid email address',
+            'password.required' => 'Please enter password',
+            'password.min' => 'Please input minimum 6 characters',
+            'password.confirmed' => 'Password not matches',
         ];
     }
 }

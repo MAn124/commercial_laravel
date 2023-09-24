@@ -20,5 +20,7 @@ Route::get('/', function () {
 Route::get('/register', function() {
     return view('admin.auth.register');
 });
+Route::get('/register', [AuthController::class, 'getRegister'])->name('getRegister');
+Route::post('/register', [AuthController::class, 'postRegister'])->name('postRegister');
 Route::get('/login', [AuthController::class, 'getLogin'])->name('getLogin');
-Route::post('/login', [AuthController::class, 'login'])->name('postLogin');
+Route::post('/login', [AuthController::class, 'postLogin'])->name('postLogin');

@@ -12,7 +12,8 @@ class AuthController extends Controller
 
         return view('admin.auth.login');
     }
-    public function postLogin() {
+    public function postLogin(Request $request) {
+      $email = $request->userName;
       
     }
     public function getRegister() {
@@ -24,5 +25,6 @@ class AuthController extends Controller
             'email' => $request->email,
             'pasword' => $request->password,
         ]);
+        return redirect()->view('admin.auth.login');
     }
 }

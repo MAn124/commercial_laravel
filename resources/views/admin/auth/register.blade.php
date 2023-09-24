@@ -24,7 +24,7 @@
                                 <div class="card-body">
                                     <div class="d-flex align-items-center justify-content-between m-b-30">
                                         <img class="img-fluid" alt="" src="assets/images/logo/logo.png">
-                                        <h2 class="m-b-0">Sign In</h2>
+                                        <h2 class="m-b-0">Register</h2>
                                     </div>
                                     <form method="POST" action="{{route('postRegister')}}">
                                         @csrf
@@ -50,7 +50,7 @@
                                                     <input id="checkbox" type="checkbox">
                                                     <label for="checkbox"><span>I have read the <a href="">agreement</a></span></label>
                                                 </div>
-                                                <button class="btn btn-primary">Sign In</button>
+                                                <button class="btn btn-primary">Register</button>
                                             </div>
                                         </div>
                                     </form>
@@ -59,17 +59,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-none d-md-flex p-h-40 justify-content-between">
-                    <span class="">© 2019 ThemeNate</span>
-                    <ul class="list-inline">
-                        <li class="list-inline-item">
-                            <a class="text-dark text-link" href="">Legal</a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="text-dark text-link" href="">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+               
             </div>
         </div>
     </div>
