@@ -10,14 +10,19 @@ class AuthController extends Controller
 {
     public function getLogin() {
 
-        return view('admin.auth.login');
+        return view('auth.login');
     }
     public function postLogin(Request $request) {
       $email = $request->userName;
-      
+      $password = $request->password;
+      if (Auth::attempt(['email' => $email, 'password' => $password])) {
+            return redirect()->view('layout.master');
+        } else {
+            return redirect()->view('auth.login');
+        }
     }
     public function getRegister() {
-        return view('admin.auth.register');
+        return view('auth.register');
     }
     public function postRegister(AuthRequest $request) {
         User::create([
@@ -25,6 +30,6 @@ class AuthController extends Controller
             'email' => $request->email,
             'pasword' => $request->password,
         ]);
-        return redirect()->view('admin.auth.login');
+        return redirect()->view('auth.login');
     }
 }

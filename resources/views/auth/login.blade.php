@@ -26,7 +26,8 @@
                                         <img class="img-fluid" alt="" src="assets/images/logo/logo.png">
                                         <h2 class="m-b-0">Sign In</h2>
                                     </div>
-                                    <form>
+                                    <form method="POST" action="{{route('postLogin')}}">
+                                        @csrf
                                         <div class="form-group">
                                             <label class="font-weight-semibold" for="userName">Username:</label>
                                             <div class="input-affix">

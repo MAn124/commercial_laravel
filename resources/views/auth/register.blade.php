@@ -31,18 +31,30 @@
                                         <div class="form-group">
                                             <label class="font-weight-semibold" for="userName">Username:</label>
                                             <input type="text" class="form-control" id="userName" placeholder="Username">
+                                            @if ($errors->has('userName'))
+                                                <span class="text-danger">{{ $errors->first('userName') }}</span>
+                                            @endif
                                         </div>
                                         <div class="form-group">
                                             <label class="font-weight-semibold" for="email">Email:</label>
                                             <input type="email" class="form-control" id="email" placeholder="Email">
+                                            @if ($errors->has('email'))
+                                            <span class="text-danger">{{ $errors->first('email') }}</span>
+                                        @endif
                                         </div>
                                         <div class="form-group">
                                             <label class="font-weight-semibold" for="password">Password:</label>
                                             <input type="password" class="form-control" id="password" placeholder="Password">
+                                            @if ($errors->has('password'))
+                                            <span class="text-danger">{{ $errors->first('password') }}</span>
+                                        @endif
                                         </div>
                                         <div class="form-group">
                                             <label class="font-weight-semibold" for="confirmPassword">Confirm Password:</label>
                                             <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+                                            @if ($errors->has('confirmPassword'))
+                                            <span class="text-danger">{{ $errors->first('confirmPassword') }}</span>
+                                        @endif
                                         </div>
                                         <div class="form-group">
                                             <div class="d-flex align-items-center justify-content-between p-t-15">
