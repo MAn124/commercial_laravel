@@ -3,6 +3,8 @@
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\AuthController;
+use App\Http\Controllers\admin\UserController as AdminUserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,4 +26,4 @@ Route::get('/register', [AuthController::class, 'getRegister'])->name('getRegist
 Route::post('/register', [AuthController::class, 'postRegister'])->name('postRegister');
 Route::get('/login', [AuthController::class, 'getLogin'])->name('getLogin');
 Route::post('/login', [AuthController::class, 'postLogin'])->name('postLogin');
-Route::get('/user', );
+Route::get('/user',[AdminUserController::class, 'index'])->name('getIndex');
