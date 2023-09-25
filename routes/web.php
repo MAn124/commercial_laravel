@@ -24,3 +24,4 @@ Route::get('/register', [AuthController::class, 'getRegister'])->name('getRegist
 Route::post('/register', [AuthController::class, 'postRegister'])->name('postRegister');
 Route::get('/login', [AuthController::class, 'getLogin'])->name('getLogin');
 Route::post('/login', [AuthController::class, 'postLogin'])->name('postLogin');
+Route::get('/user', );
