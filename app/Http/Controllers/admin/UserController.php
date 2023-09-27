@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\user;
+use Illuminate\Pagination\Paginator;
 
 class UserController extends Controller
 {
@@ -14,7 +15,7 @@ class UserController extends Controller
         $this->model = User::query();
     }
     public function index() {
-        $data = $this->model->get()->paginate();
+        $data = $this->model->get();
         return view('admin.user.index',[
             'data' => $data,
         ]);

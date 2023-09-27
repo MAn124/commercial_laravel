@@ -18,7 +18,7 @@ use App\Http\Controllers\admin\UserController as AdminUserController;
 
 Route::get('/', function () {
     return view('layout.master');
-});
+})->name('welcome');
 Route::get('/register', function() {
     return view('admin.auth.register');
 });

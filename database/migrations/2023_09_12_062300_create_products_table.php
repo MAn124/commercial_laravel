@@ -18,13 +18,12 @@ class CreateProductsTable extends Migration
             $table->string('name',50);
             $table->float('price');
             $table->text('longdesc')->nullable();
-            $table->text('lhortdesc')->nullable();
+            $table->text('shortdesc')->nullable();
             $table->float('stock');
             $table->text('description');
             $table->foreignId('category_id')->constrained();
             $table->text('image');
-            $table->timestamps('create_at');
-            $table->timestamps('update_at');
+            $table->timestamps();
         });
     }
 
