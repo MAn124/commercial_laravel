@@ -33,4 +33,7 @@ class AuthController extends Controller
         ]);
         return redirect()->view('auth.login');
     }
+    public function redirect() {
+        return redirect()->view('welcome');
+    }
 }

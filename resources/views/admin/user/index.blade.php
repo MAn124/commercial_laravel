@@ -1,16 +1,15 @@
 @extends('layout.master')
 @section('content')
 <div class="table-responsive">
-    <div class="dropdown" id="role-select">
-        <button class="btn btn-default dropdown-toggle"  data-toggle="dropdown">
-            <span>Dropdown button</span>
-        </button>
-        <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-    </div>
+    <form action="" id="role-filter">
+        <select class="custom-select select-role" style="min-width: 180px;" id="role" name="role">
+            <option selected="">All</option>         
+            <option value=""></option>        
+        </select>      
+    </form>
+    <form action="{{route('createUser')}}">
+        <button class="btn btn-primary m-r-5">Create</button>
+    </form>
     <table class="table">
         <thead>
             <tr>
@@ -24,13 +23,17 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            
+            @foreach ($data as $each)
+                <tr>
+                    <th scope="row">{{$each->id}}</th>
+                    <td>{{$each->name}}</td>
+                    <td>{{$each->email}}</td>
+                    <td>{{$each->phone}}</td>
+                    <td>{{$each->address}}</td>
+                    <td>{{$each->role}}</td>
+                    <td>{{$each->status}}</td>
+                </tr>
+            @endforeach           
         </tbody>
     </table>
 </div>

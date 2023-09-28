@@ -20,4 +20,7 @@ class UserController extends Controller
             'data' => $data,
         ]);
     }
+    public function create() {
+        return 'ok';
+    }
 }

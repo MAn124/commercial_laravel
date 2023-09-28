@@ -1,9 +1,8 @@
 <?php
 
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\admin\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\AuthController;
-use App\Http\Controllers\admin\UserController as AdminUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +15,7 @@ use App\Http\Controllers\admin\UserController as AdminUserController;
 |
 */
 
-Route::get('/', function () {
-    return view('layout.master');
-})->name('welcome');
+Route::get('/',[AuthController::class,'redirect'])->name('welcome');
 Route::get('/register', function() {
     return view('admin.auth.register');
 });
@@ -26,4 +23,10 @@ Route::get('/register', [AuthController::class, 'getRegister'])->name('getRegist
 Route::post('/register', [AuthController::class, 'postRegister'])->name('postRegister');
 Route::get('/login', [AuthController::class, 'getLogin'])->name('getLogin');
 Route::post('/login', [AuthController::class, 'postLogin'])->name('postLogin');
-Route::get('/user',[AdminUserController::class, 'index'])->name('getIndex');
+Route::prefix('/admin')->group(function(){
+    Route::get('/', function(){ return view('layout.master');});
+    Route::prefix('/user')->group(function () {
+        Route::get('/',[UserController::class,'index'])->name('getIndex');
+        Route::get('/create', [UserController::class,'create'])->name('createUser');
+    });
+});
