@@ -21,6 +21,11 @@ class UserController extends Controller
         ]);
     }
     public function create() {
-        return 'ok';
+        return view('admin.user.create');
+    }
+    public function post() {
+        User::create([
+            
+        ]);
     }
 }

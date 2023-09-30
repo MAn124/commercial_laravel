@@ -1,0 +1,1 @@
+<h4 action="{{route('welcome')}}">Please wait...</h4>

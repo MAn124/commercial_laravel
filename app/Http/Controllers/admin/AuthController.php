@@ -5,7 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AuthRequest;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 class AuthController extends Controller
 {
@@ -34,6 +34,6 @@ class AuthController extends Controller
         return redirect()->view('auth.login');
     }
     public function redirect() {
-        return redirect()->view('welcome');
+        return view('auth.login');
     }
 }
