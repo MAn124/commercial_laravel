@@ -23,9 +23,16 @@ class UserController extends Controller
     public function create() {
         return view('admin.user.create');
     }
-    public function post() {
+    public function post(Request $request) {
         User::create([
-            
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => $request->password,
+            'avatar' => $request->avatar,
+            'phone' => $request->phone,
+            'address' => $request->address,
+            'role' => $request->role,
         ]);
+        return view('admin.user.index');
     }
 }
