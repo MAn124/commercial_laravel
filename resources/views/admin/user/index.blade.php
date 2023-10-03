@@ -3,8 +3,9 @@
 <div class="table-responsive">
     <form action="" id="role-filter">
         <select class="custom-select select-role" style="min-width: 180px;" id="role" name="role">
-            <option selected="">All</option>         
-            <option value=""></option>        
+            @foreach ($data as $each)               
+                <option selected="" value="{{}}">All</option>         
+            @endforeach                  
         </select>      
     </form>
     <form action="{{route('createUser')}}">
@@ -20,6 +21,8 @@
                 <th scope="col">Address</th>
                 <th scope="col">Role</th>
                 <th scope="col">Status</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -30,8 +33,10 @@
                     <td>{{$each->email}}</td>
                     <td>{{$each->phone}}</td>
                     <td>{{$each->address}}</td>
-                    <td>{{$each->role}}</td>
-                    <td>{{$each->status}}</td>
+                    <td>{{$each->role_name}}</td>
+                    <td>{{$each->status_name}}</td>
+                    <td><button class="btn btn-warning m-r-5">Edit</button></td>
+                    <td><button class="btn btn-danger m-r-5">Delete</button></td>                   
                 </tr>
             @endforeach           
         </tbody>

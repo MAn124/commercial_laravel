@@ -14,12 +14,7 @@ class UserController extends Controller
     {
         $this->model = User::query();
     }
-    public function index() {
-        $data = $this->model->get();
-        return view('admin.user.index',[
-            'data' => $data,
-        ]);
-    }
+
     public function create() {
         return view('admin.user.create');
     }
@@ -34,5 +29,11 @@ class UserController extends Controller
             'role' => $request->role,
         ]);
         return view('admin.user.index');
+    }
+    public function index() {
+        $data = $this->model->paginate();
+        return view('admin.user.index',[
+            'data' => $data,
+        ]);
     }
 }

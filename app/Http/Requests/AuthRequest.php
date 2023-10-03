@@ -25,7 +25,7 @@ class AuthRequest extends FormRequest
     {
         return [
             'name' => 'required | max:50 | min:8',
-            'email' => 'required | email',
+            'email' => 'required | email ',
             'password' => 'required | min:6 | confirmed',
         ];
     }
