@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\user;
 use Illuminate\Pagination\Paginator;
+use App\Http\Requests\UserRequest;
+
 
 class UserController extends Controller
 {
@@ -18,7 +20,7 @@ class UserController extends Controller
     public function create() {
         return view('admin.user.create');
     }
-    public function post(Request $request) {
+    public function post(UserRequest $request) {
         User::create([
             'name' => $request->name,
             'email' => $request->email,

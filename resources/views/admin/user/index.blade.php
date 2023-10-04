@@ -4,7 +4,7 @@
     <form action="" id="role-filter">
         <select class="custom-select select-role" style="min-width: 180px;" id="role" name="role">
             @foreach ($data as $each)               
-                <option selected="" value="{{}}">All</option>         
+                <option selected="" >All</option>         
             @endforeach                  
         </select>      
     </form>

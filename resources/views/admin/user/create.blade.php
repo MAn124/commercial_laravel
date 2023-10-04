@@ -5,18 +5,30 @@
             <div class="form-row"> <div class="form-group col-md-6">
                 <label for="name">Name</label>
                 <input  class="form-control" id="name" name="name" placeholder="Name">
+                @error('name')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
             <div class="form-group col-md-6">
                 <label for="inputEmail4">Email</label>
                 <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                @error('email')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
             </div>
             <div class="form-group col-md-6">
                 <label for="inputPassword4">Password</label>
                 <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                @error('password')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
             </div>
             <div class="form-group col-md-6">
                 <label for="inputPassword4">Confirm Password</label>
-                <input type="password" class="form-control" id="confirmpassword" placeholder="Password">
+                <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Password">
+                @error('confirmpassword')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
             <div class="form-group col-md-6 mt-auto">
                 
@@ -26,11 +38,17 @@
             <div class="form-group col-md-6">
                 <label for="phone">Phone</label>
                 <input class="form-control" id="phone" name="phone" placeholder="Phone">
+                @error('phone')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
         </div>      
         <div class="form-group">
             <label for="inputAddress">Address</label>
             <input type="text" class="form-control" name="address" id="inputAddress" >
+            @error('address')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
         </div>
         <fieldset class="form-group">
             <div class="row">
