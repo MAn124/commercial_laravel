@@ -10,17 +10,14 @@ use App\Models\User;
 class AuthController extends Controller
 {
     public function getLogin() {
-
-        return view('auth.login');
+        if(Auth::check()) {
+            return view('admin.index');
+        } else {
+            return view('auth.login');
+        }
     }
     public function postLogin(Request $request) {
-      $email = $request->userName;
-      $password = $request->password;
-      if (Auth::attempt(['email' => $email, 'password' => $password])) {
-            return redirect()->view('layout.master');
-        } else {
-            return redirect()->view('auth.login');
-        }
+       
     }
     public function getRegister() {
         return view('auth.register');
