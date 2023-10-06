@@ -17,7 +17,15 @@ class AuthController extends Controller
         }
     }
     public function postLogin(Request $request) {
-       
+        $login = [
+            'email' => $request->email,
+            'password' => $request->password,
+            'role' => 1,
+            'status' => 1,
+        ];
+       if(Auth::attempt($login)) {
+            return redirect('auth.index');
+       }
     }
     public function getRegister() {
         return view('auth.register');
