@@ -26,6 +26,9 @@ class AuthController extends Controller
        if(Auth::attempt($login)) {
             return redirect('auth.index');
        }
+        else {
+            return redirect()->back()->with('status', 'Account Not Authenticated');
+        }
     }
     public function getRegister() {
         return view('auth.register');
