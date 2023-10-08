@@ -49,12 +49,11 @@
     <script src="{{asset('/js/vendors.min.js')}}"></script>
 
     <!-- page js -->
-    <script src="{{asset('/vendors/chartjs/Chart.min.js')}}"></script>
     <script src="{{asset('/js/pages/dashboard-default.js')}}"></script>
     <script src="https://kit.fontawesome.com/78455fa1a9.js" crossorigin="anonymous"></script>
     <!-- Core JS -->
     <script src="{{asset('/js/app.min.js')}}"></script>
-
+    @stack('js')
 
 
 </body></html>

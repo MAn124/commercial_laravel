@@ -3,8 +3,9 @@
 <div class="table-responsive">
     <form action="" id="role-filter">
         <select class="custom-select select-role" style="min-width: 180px;" id="role" name="role">
-            @foreach ($data as $each)               
-                <option selected="" >All</option>         
+            <option value="" selected>All</option>
+            @foreach ($roles as $roles => $value)               
+                <option  value="{{$value}}">{{$roles}}</option>         
             @endforeach                  
         </select>      
     </form>
@@ -42,4 +43,13 @@
         </tbody>
     </table>
 </div>
+@push('js')
+    <script>
+     $(document).ready(function(){
+        $(".select-role").change(function(){
+            $("#role-filter").submit();
+        })
+     })
+    </script>
+@endpush
 @endsection

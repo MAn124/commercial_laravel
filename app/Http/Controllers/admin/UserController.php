@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Enums\UserRoleEnum;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\user;
@@ -34,8 +35,10 @@ class UserController extends Controller
     }
     public function index() {
         $data = $this->model->paginate();
+        $roles = UserRoleEnum::asArray();
         return view('admin.user.index',[
             'data' => $data,
+            'roles' => $roles,
         ]);
     }
 }

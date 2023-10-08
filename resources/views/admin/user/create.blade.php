@@ -71,6 +71,5 @@
             </div>
         </fieldset>
         <button class="btn btn-primary m-r-5" type="submit">Submit</button>
-    </form>
-    
+    </form>  
 @endsection
