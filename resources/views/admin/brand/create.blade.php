@@ -5,11 +5,7 @@
         <label for="inputAddress2">Brand Name</label>
         <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
     </div>
-    <div id="editor" class="brand-desc">
-        <p>Hello World!</p>
-        <p>Some initial <strong>bold</strong> text</p>
-        <p><br></p>
-    </div>
+   <textarea name="" id="" cols="30" rows="10"></textarea>
     <button class="btn btn-primary m-r-5" type="submit">Submit</button>
 </form>
 @push('js')
