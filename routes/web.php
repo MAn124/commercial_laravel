@@ -3,6 +3,7 @@
 use App\Http\Controllers\admin\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\AuthController;
+use App\Http\Controllers\admin\BrandController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,5 +30,10 @@ Route::prefix('/admin')->group(function(){
         Route::get('/',[UserController::class,'index'])->name('getIndex');
         Route::get('/create', [UserController::class,'create'])->name('createUser');
         Route::post('/create', [UserController::class,'post'])->name('postUser');
+    });
+    Route::prefix('/brand')->group(function () {
+        Route::get('/',[BrandController::class,'index'])->name('getBrandIndex');
+        Route::get('/create',[BrandController::class,'create'])->name('createBrand');
+        Route::post('/create',[BrandController::class,'postBrand'])->name('postBrand');
     });
 });
