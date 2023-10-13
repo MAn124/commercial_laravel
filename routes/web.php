@@ -36,4 +36,9 @@ Route::prefix('/admin')->group(function(){
         Route::get('/create',[BrandController::class,'create'])->name('createBrand');
         Route::post('/create',[BrandController::class,'postBrand'])->name('postBrand');
     });
+    Route::prefix('/category')->group(function () {
+        Route::get('/',[CategoryController::class,'index'])->name('getBrandIndex');
+        Route::get('/create',[CategoryController::class,'create'])->name('createBrand');
+        Route::post('/create',[CategoryController::class,'postBrand'])->name('postBrand');
+    });
 });

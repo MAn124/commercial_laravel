@@ -6,15 +6,15 @@
            <option value="" selected>All</option>              
         </select>      
     </form>
-    <form action="{{route('postBrand')}}">
+    <form action="{{route('')}}">
         <button class="btn btn-primary m-r-5">Create</button>
     </form>
     <table class="table">
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Brand Name</th>
-                <th scope="col">Brand Description</th>
+                <th scope="col">Category Name</th>
+                <th scope="col">Category Description</th>
             </tr>
         </thead>
         <tbody>
