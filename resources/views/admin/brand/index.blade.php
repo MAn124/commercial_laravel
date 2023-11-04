@@ -18,13 +18,15 @@
             </tr>
         </thead>
         <tbody>
+            @foreach ($data as $each)
                 <tr>
                     <th>{{$each->id}}</th>
                     <td>{{$each->brand_name}}</td>
                     <td>{{$each->brand_description}}</td>
                     <td><button class="btn btn-warning m-r-5">Edit</button></td>
                     <td><button class="btn btn-danger m-r-5">Delete</button></td>                   
-                </tr>          
+                </tr>                        
+            @endforeach
         </tbody>
     </table>
 </div>

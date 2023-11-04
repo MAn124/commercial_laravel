@@ -4,9 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Enums\UserRoleEnum;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\user;
-use Illuminate\Pagination\Paginator;
 use App\Http\Requests\UserRequest;
 
 

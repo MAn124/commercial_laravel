@@ -7,7 +7,7 @@
                     </span>
                     <span class="title">Users</span>
                 </a>
-                <a class="dropdown-toggle" href="{{route('getIndex')}}">
+                <a class="dropdown-toggle" href="{{route('getBrandIndex')}}">
                     <span class="icon-holder">                   
                     </span>
                     <span class="title">Brands</span>
